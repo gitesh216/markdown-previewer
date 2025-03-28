@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* Custom Scrollbar */
+textarea::-webkit-scrollbar,
+#preview::-webkit-scrollbar {
+  width: 6px;
+}
+textarea::-webkit-scrollbar-thumb,
+#preview::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+textarea::-webkit-scrollbar-thumb:hover,
+#preview::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.markdown-body {
+  font-size: 1rem; /* Default text size */
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+/* Headings */
+.markdown-body h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-body h2 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.65rem;
+}
+
+.markdown-body h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.markdown-body p {
+  margin-bottom: 1rem;
+}
+
+/* Lists */
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.markdown-body ul li::before {
+  content: "• ";
+  color: #3498db;
+}
+
+/* Blockquote */
+.markdown-body blockquote {
+  padding: 0.5rem 1rem;
+  margin: 0 0 1rem;
+  border-left: 4px solid #3498db;
+  background-color: rgba(52, 152, 219, 0.1);
+  font-style: italic;
+}
+
+/* Inline Code */
+.markdown-body code {
+  font-family: "Courier New", monospace;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+/* Code Blocks */
+.markdown-body pre {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  padding: 1rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.markdown-body pre code {
+  background: none;
+  padding: 0;
+  font-size: 1rem;
+}

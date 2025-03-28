@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown Previewer</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Highlight.js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition duration-300"
+  >
+    <!-- Header -->
+    <header
+      class="text-center py-6 bg-blue-600 dark:bg-blue-800 text-white text-2xl font-semibold"
+    >
+      Markdown Previewer
+    </header>
+
+    <!-- Main Container -->
+    <main class="container mx-auto p-6">
+
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <!-- Markdown Input Section -->
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+          <div class="flex justify-between items-center mb-2">
+            <h2 class="text-lg font-semibold">Write Markdown</h2>
+            <div>
+              <button
+                id="copyBtn"
+                class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-md text-sm mr-2"
+              >
+                Copy
+              </button>
+              <button
+                id="clearBtn"
+                class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded-md text-sm"
+              >
+                Clear
+              </button>
+            </div>
+          </div>
+          <textarea
+            id="markdownInput"
+            class="w-full h-96 p-3 border rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:outline-none resize-none"
+            placeholder="Enter your Markdown here..."
+          ></textarea>
+        </div>
+
+        <!-- Markdown Preview Section -->
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+          <h2 class="text-lg font-semibold mb-2">Live Preview</h2>
+          <div
+            id="preview"
+            class="w-full h-96 p-5 border rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200 overflow-auto markdown-body"
+          ></div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
